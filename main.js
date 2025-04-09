@@ -12,7 +12,7 @@ function guardarNombre() {
 
 function verNombre() {
   if (mensaje) {
-    let nombreGuardado = localStorage.getItem("nombre");
+    let nombreGuardado = (localStorage.getItem("nombre")!=null);
     
     if (nombreGuardado) {
       mensaje.innerText = `Hola ${nombreGuardado}. Bienvenido/a de nuevo`;
@@ -35,5 +35,5 @@ window.addEventListener('load', function() {
     btnEliminar.addEventListener("click", eliminaNombre);
   }
 
-  verNombre();  // Esta función ahora maneja la lógica completa
+  verNombre();  
 });
